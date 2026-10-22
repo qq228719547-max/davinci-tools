@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "max_archive_bytes": 268435456,
+  "categories": [
+    {"id": "voice", "name": "配音", "color": "Blue"},
+    {"id": "music", "name": "音乐", "color": "Green"},
+    {"id": "sfx", "name": "音效", "color": "Orange"},
+    {"id": "original", "name": "同期原声", "color": "Purple"},
+    {"id": "review", "name": "待确认", "color": "Yellow"}
+  ],
+  "overrides": [],
+  "folder_rules": [
+    {"category": "voice", "patterns": ["(?:^|/)(?:配音|旁白|解说|人声|voice|voiceover|voice-over|narration|dialogue|vo)(?:/|$)"]},
+    {"category": "music", "patterns": ["(?:^|/)(?:音乐|背景音乐|配乐|music|bgm|soundtrack)(?:/|$)"]},
+    {"category": "sfx", "patterns": ["(?:^|/)[^/]*(?:音效|拟声|环境音|sfx|sound[ _-]?effects?)[^/]*(?:/|$)"]}
+  ],
+  "filename_rules": [
+    {"category": "voice", "patterns": ["(?:配音|旁白|解说|voiceover|narration)"]},
+    {"category": "music", "patterns": ["(?:^|[_ .-])bgm(?:[_ .-]|$)", "^\\d+_full_"]},
+    {"category": "sfx", "patterns": ["whoosh|woosh|riser|quick[ _-]?pan|fast[ _-]?whip|moto[ _-]?pass|bold[ _-]?hit|clicker|音效|转场|科技|机械|水滴|轮船|嗖嗖"]}
+  ],
+  "original_extensions": [".mp4", ".mov", ".mxf", ".braw", ".r3d", ".mts", ".m2ts", ".avi"],
+  "unknown_category": "review"
+}
